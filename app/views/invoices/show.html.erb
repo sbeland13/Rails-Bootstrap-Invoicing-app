@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
-
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Invoices</h3>
+      <h3 class="panel-title">Invoices</h3>
       </div>
 
       <div class="panel-body">
@@ -28,17 +27,15 @@
           <%= @invoice.date %>
         </p>
       </div>
+
       <div class="panel-footer">
         <div class="btn-group">
-          <%= link_to 'Edit', edit_invoice_path(@invoice), class: 'btn btn-primary' %>
-          <%= link_to 'Back', invoices_path, class: 'btn btn-default' %>
-
+          <%= link_to 'Edit', edit_invoice_path(@invoice), class: "btn btn-success" %>
+          <%= link_to 'Back', invoices_path, class: "btn btn-default" %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
 

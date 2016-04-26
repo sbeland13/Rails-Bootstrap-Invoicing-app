@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>SFInvoices</title>
-  <%= stylesheet_link_tag    'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
@@ -16,14 +16,11 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">SF Invoices</a>
+	      <a class="navbar-brand" href="/">SERPforce Invoices</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-	      <ul class="nav navbar-nav">
-	        
-	        <li><%= link_to("Invoices", invoices_path) %></li>
-	      </ul>
+	      
 	    </div>
 	  </div>
 	</nav>

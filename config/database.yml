@@ -13,8 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
+  username: invoicesadmin
   password: Passwrd_21
+  host: localhost
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: SFInvoices_production
-  username: SFInvoices
-  password: <%= ENV['SFINVOICES_DATABASE_PASSWORD'] %>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
